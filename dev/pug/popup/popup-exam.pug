@@ -1,0 +1,87 @@
+#popup-exam-reg.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Запись на экзамен
+                    span
+                .popup-exam-reg.mr-0.ml-0
+                    .popup-exam-icon
+                        +icon('home2')
+                    .popup-exam-content
+                        .popup-exam-title Оформление вида на жительство
+                        .popup-exam-desc Комплексное тестирование для получения разрешения на работу
+            .popup-middle
+                .popup-input-wrap.mb-0
+
+                    .input-ur-forms--wrap
+                        input.input-ur-forms.mb-30(type="text" placeholder="Фамилия")
+                        input.input-ur-forms.mb-30.mask-phone(type="tel" placeholder="Телефон")
+
+                    .input-ur-forms--wrap
+                        input.input-ur-forms.mb-30(type="text" placeholder="Имя")
+                        input.input-ur-forms.mb-30(type="email" placeholder="Email")
+
+                    .input-ur-forms--wrap
+                        input.input-ur-forms(type="text" placeholder="Отчество")
+                        .input-ur-date
+                            input.input-ur-forms.mask-date.date-exam(type="text" placeholder="Дата экзамена" )
+                            +icon('calendar')
+                            .ur-show-calendar
+                                .popup-calendar--date__exam__wrap
+                                    .popup-calendar--date__exam__title Время проведения экзамена
+                                    .popup-calendar--date__exam--check--wrap
+                                        .popup-calendar--date__exam--checkbox__item
+                                            label
+                                                input.popup-calendar--date__exam--checkbox__input(type="radio" name="exam_valid_time")
+                                                .popup-calendar--date__exam--checkbox
+                                                    .popup-calendar--date__exam--checkbox--dot
+                                                    .popup-calendar--date__exam--label с 08:00 по 10:00
+                                        .popup-calendar--date__exam--checkbox__item
+                                            label
+                                                input.popup-calendar--date__exam--checkbox__input(type="radio" name="exam_valid_time")
+                                                .popup-calendar--date__exam--checkbox
+                                                    .popup-calendar--date__exam--checkbox--dot
+                                                    .popup-calendar--date__exam--label с 08:00 по 10:00
+                                        .popup-calendar--date__exam--checkbox__item
+                                            label
+                                                input.popup-calendar--date__exam--checkbox__input(type="radio" name="exam_valid_time")
+                                                .popup-calendar--date__exam--checkbox
+                                                    .popup-calendar--date__exam--checkbox--dot
+                                                    .popup-calendar--date__exam--label с 08:00 по 10:00
+                                        .popup-calendar--date__exam--checkbox__item
+                                            label
+                                                input.popup-calendar--date__exam--checkbox__input(type="radio" name="exam_valid_time")
+                                                .popup-calendar--date__exam--checkbox
+                                                    .popup-calendar--date__exam--checkbox--dot
+                                                    .popup-calendar--date__exam--label с 08:00 по 10:00
+                                        .popup-calendar--date__exam--checkbox__item
+                                            label
+                                                input.popup-calendar--date__exam--checkbox__input(type="radio" name="exam_valid_time")
+                                                .popup-calendar--date__exam--checkbox
+                                                    .popup-calendar--date__exam--checkbox--dot
+                                                    .popup-calendar--date__exam--label с 08:00 по 10:00
+            .popup-bottom
+                .popup-title Способ оплаты
+                .popup-pay-method
+                    .popup-pay-online.popup-checkbox-style
+                        label
+                            input.popup-pay-checked-input(type="radio" name="pay_type")
+                            .popup-pay-check
+                                .popup-pay-dot
+                                .popup-pay-title Картой онлайн
+                    .popup-pay-nal.popup-checkbox-style
+                        label
+                            input.popup-pay-checked-input(type="radio" name="pay_type")
+                            .popup-pay-check
+                                .popup-pay-dot
+                                .popup-pay-title Наличными
+
+                .activate-promo--wrap
+                    .input-promo.input-ur-forms.activate-promo--input__wrap
+                        input(type="text" placeholder="Промокод")
+                        span.activate-promo Активировать
+                button.main-button-color.mw-200.m-0-auto(type="submit") Оплатить
+                    +arrow('arrow-button')
+

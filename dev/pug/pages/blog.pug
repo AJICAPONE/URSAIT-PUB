@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Блог'
+    - var pageClass = 'index-page'
+
+block content
+    include articles/section1
+    include ../modules/breadcrumbs
+    include articles/section2

@@ -1,0 +1,32 @@
+#popup-load-video.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Загрузка видеоотзыва
+                    span
+
+            .popup-middle
+                .popup-input-wrap.mb-0
+
+                    .input-ur-forms--wrap
+
+                        .input-ur-forms.mb-30.blog-articles-sort-attr.w-100
+                            .blog-articles-sort-attr--select
+                                span Ваша профессия
+                                +icon('arrow-down')
+                                ul.blog-articles-sort-attr--select__list.margin-0-15
+                                    li.blog-articles-sort-attr--select__item Ваша профессия
+                                    li.blog-articles-sort-attr--select__item Ваша профессия2
+
+
+                    .input-ur-forms--wrap
+
+                        textarea.textarea-forms.mb-30.w-100(cols="5" rows="5" placeholder="Поделитесь вашим мнением о нашем сервисе...")
+
+
+            .popup-bottom
+
+                .main-button-color.mw-200.m-0-auto(data-dismiss="modal" data-toggle="modal" data-target="#popup-loaded-video") Оставить отзыв
+                    +arrow('arrow-button')

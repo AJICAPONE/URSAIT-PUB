@@ -1,0 +1,31 @@
+#popup-auth.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Войдите в свой аккаунт
+                    span
+            .popup-middle
+                .popup-input-wrap.m-40px
+                    input.input-ur-forms.mb-30(type="text" placeholder="Login")
+                    input.input-ur-forms(type="password" placeholder="Пароль")
+                .popup-checkbox-wrap.m-40px
+                    .popup-remember-me
+                        input#remember-me.checkbox-form(type="checkbox")
+                        label(for="remember-me") Запомнить меня
+                    a.popup-forgot-password(data-toggle="modal" data-dismiss="modal" data-target="#popup-restore") Забыли пароль?
+                button.main-button-color.mw-200.m-0-auto(type="submit") Войти
+                    +arrow('arrow-button')
+            .popup-bottom
+                .popup-have-acc Еще нет аккаунта?
+                    span(data-dismiss="modal" data-toggle="modal" data-target="#popup-reg") Создать аккаунт
+                .popup-login-social
+                    .popup-login-social-label Или войдите через:
+                    .popup-login-social--list
+                        .popup-login-social--item
+                            +icon('facebook')
+                        .popup-login-social--item
+                            +icon('vk')
+                        .popup-login-social--item
+                            +icon('google')

@@ -1,0 +1,46 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+
+		link(rel="stylesheet" type='text/css' href="static/css/main.css")
+
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+	body(class=pageClass)
+		.wrapper
+			include ../modules/header
+			.content
+				block content
+				include ../popup/popup-auth
+				include ../popup/popup-reg
+				include ../popup/popup-restore
+				include ../popup/popup-restore2
+				include ../popup/popup-restore3
+				include ../popup/popup-exam
+				include ../popup/popup-chat-login
+				include ../popup/popup-chat
+				include ../popup/popup-test-go
+				include ../popup/popup-docum
+				include ../popup/popup-load-video
+				include ../popup/popup-loaded-video
+				include ../modules/support
+
+			include ../modules/footer
+
+		script(src="static/js/jquery2.js")
+		script(src="static/js/libs.min.js")
+		script(src="static/js/main.js")
+		script(src="static/js/jquery.hoverIntent.min.js")
+		script(src="static/js/datepicker.ru-RU.js")
+		block script

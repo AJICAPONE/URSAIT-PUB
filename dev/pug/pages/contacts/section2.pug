@@ -1,0 +1,51 @@
+section.section2.padding-deafault-50.pt-0
+    .container
+        .services-main--block.contacts-main--block
+            .have-question--wrap
+                .have-question--left
+                    .section-title ООО “Название”
+                    .contacts-grafik-rabot График работ:
+                    ul.contacts-grafik--list 
+                        li Понедельник-пятница: с 09:00 до 19:00
+                        li Суббота: с 10:00 до 18:00
+                        li Воскресенье: выходной
+                    .have-question--left__phone
+                        +icon('phone')
+                        a.have-question--left__link(href="tel:89991234567") 8 (999) 123 45 67
+                    .have-question--left__phone
+                        +icon('email')
+                        a.have-question--left__link(href="mailto:info@name.com") info@name.com
+                    .have-question--left__phone
+                        +icon('map')
+                        a.have-question--left__link(href="/") 127055 Москва, ул.Новослободская д.26, стр.1, 5 этаж, оф. 559   
+                    .contact-ur-info ИНН: 
+                        span 9701027110
+                    .contact-ur-info ОГРН: 
+                        span 5157746205304   
+
+                .have-question--right
+                    .form-title Свяжитесь с нами
+                        span
+                    form
+                        .form--wrap
+                            .input-form--wrap.contacts-form-page
+                                input.input-ur-forms.w-100.mb-30(type="text" placeholder="ФИО")
+                                input.input-ur-forms.w-48(type="email" placeholder="Email...")
+                                .contacts-tel-reg.input-ur-forms.w-48
+                                    .contacts-tel-reg--wrap
+                                        .contacts-tel-reg--flag(style="background-image:url('./static/img/content/ru.jpg')")
+                                        .contacts-tel-reg--arrow 
+                                            +icon('arrow-down')
+                                        ul.contacts-tel-reg-list 
+                                            li.contacts-tel-reg-item(data-mask-phone="(+900 00) 000-00-00")
+                                                .contacts-tel-reg-item--flag(style="background-image:url('./static/img/content/ru.jpg')")
+                                            li.contacts-tel-reg-item(data-mask-phone="+7 (000) 000-00-00")
+                                                .contacts-tel-reg-item--flag(style="background-image:url('./static/img/content/ru.jpg')")        
+                                    input.mask-phone(type="tel" minlength="18" requred placeholder="+7 (___) ___-__-__")
+                            textarea.textarea-forms.mb-4(cols="5" rows="4" placeholder="Комментарий...")
+                            button.main-button-color.mw-200.m-0-auto(type="submit") Отправить
+                                +arrow('arrow-button')
+
+
+        
+    

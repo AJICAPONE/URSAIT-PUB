@@ -1,0 +1,31 @@
+.breadcrumbs-wrap
+  display flex
+  justify-content center
+  align-items center
+  background-color #F9F9F9
+  height 46px
+  margin-bottom 40px
+  overflow-x: auto 
+.breadcrumb-list
+  display flex
+  align-items center
+  
+
+
+.breadcrumb-item
+  color rgba(39,39,39,0.3)
+  font-family Ms400
+  font-size 13px
+  position relative
+  white-space: nowrap
+  &:before
+    content '/'
+    position relative
+    color rgba(39,39,39,0.3)
+  &:first-child
+    &:before
+      display none
+  &:last-child
+    color rgba(39,39,39,0.7)
+
+

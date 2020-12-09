@@ -1,0 +1,57 @@
+#popup-test-info.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+		form.modal-content
+			.popup-header
+				.popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+					+icon('close')
+				.popup-title--icon
+					+icon('time-icon')
+				.form-title Пробное тестирование на РВП
+					p.popu-title--text Тестирование состоит из 4 разделов
+					span
+
+			.popup-middle
+				ul.popup-test--lists.m-ot-30
+					li.popup-test--item
+						.popup-test--title Грамматика
+						.popup-test--right
+							.popup-test--right__left
+								+icon('book')
+								span 20 вопросов
+							.popup-test--right__right
+								+icon('timer')
+								span 10 минут
+					li.popup-test--item
+						.popup-test--title Чтение
+						.popup-test--right
+							.popup-test--right__left
+								+icon('book')
+								span 20 вопросов
+							.popup-test--right__right
+								+icon('timer')
+								span 10 минут
+					li.popup-test--item
+						.popup-test--title Иcтория
+						.popup-test--right
+							.popup-test--right__left
+								+icon('book')
+								span 20 вопросов
+							.popup-test--right__right
+								+icon('timer')
+								span 10 минут
+					li.popup-test--item
+						.popup-test--title Законодательство
+						.popup-test--right
+							.popup-test--right__left
+								+icon('book')
+								span 20 вопросов
+							.popup-test--right__right
+								+icon('timer')
+								span 10 минут
+
+
+			.popup-bottom
+
+				button.main-button-color.mw-200.m-0-auto(type="submit") Начать
+					+arrow('arrow-button')
+

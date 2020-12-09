@@ -1,0 +1,26 @@
+#popup-reg.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Создайте свой аккаунт
+                    span
+            .popup-middle
+                .popup-input-wrap.m-40px
+                    input.input-ur-forms.mb-30(type="text" placeholder="ФИО")
+                    input.input-ur-forms.mb-30.mask-phone(type="tel" placeholder="Телефон")
+                    input.input-ur-forms.mb-30(type="email" placeholder="Email")
+                    input.input-ur-forms(type="password" placeholder="Пароль")
+                .popup-checkbox-wrap.m-40px
+                    .popup-remember-me
+                        input#agree.checkbox-form(type="checkbox")
+                        label(for="agree")
+                            span Я согласен с
+                                a.ml-1(href="/") Пользовательским соглашением и Политикой обработки персональных данных
+                button.main-button-color.mw-200.m-0-auto(type="submit") Создать аккаунт
+                    +arrow('arrow-button')
+            .popup-bottom
+                .popup-have-acc.mb-0 Уже есть аккаунт?
+                    span(data-dismiss="modal" data-toggle="modal" data-target="#popup-auth") Войдите
+

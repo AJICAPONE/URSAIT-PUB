@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Контакты'
+    - var pageClass = 'index-page'
+
+block content
+    include contacts/section1
+    include ../modules/breadcrumbs
+    include contacts/section2
+    include contacts/section3
+block script
+    script(src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript")
+    script.
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.759251, 37.598999],
+                zoom: 12
+                }),
+
+                // Создаем метку с помощью вспомогательного класса.
+                myPlacemark1 = new ymaps.Placemark([55.783324, 37.599163], {
+                // Свойства.
+                // Содержимое хинта.
+                //hintContent: 'Надпись, которая всплаывет при наведении на метку'
+                }, {
+                // Опции
+                // Своё изображение иконки метки.
+                iconImageHref: 'http://jur.itmigdex.ru/pubs/static/img/general/ur-logo.svg',
+                // Размеры метки.
+                iconImageSize: [270, 227],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [60, 30]
+                })
+
+
+            // Добавляем все метки на карту.
+            myMap.geoObjects
+                .add(myPlacemark1)
+
+        }
+
+

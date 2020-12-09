@@ -1,0 +1,32 @@
+#popup-loaded-video.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Загрузка видеоотзыва
+                    span
+                a.popup-load-you-file.popup-load-you-file--video
+                    .popup-load-you-zone.popup-load-you-file--zone
+                    input.popup-load-you-input#popup-load-you-input(type="file")
+                    .popup-load-you-info
+                        .popup-load-you-title Загрузить файл
+                        .popup-load-you-desc (нажмите или перетащите файл сюда)
+                        .popup-progress-load
+                            +icon('refresh')
+                            span Загрузка
+                        .review-tab-video-reviews__icon.pp-reviews__icon
+                            +icon('played')
+                .popup-load-you-file--progress Прогресс загрузки
+                    span#mod-vid-progress-number 0
+                        span %
+                progress.popup-load-you-file--progress-v#mod-vid-progress(max="100" value="0")
+            .popup-middle
+                .popup-input-wrap.mb-0
+
+                    .input-ur-forms--wrap
+
+            .popup-bottom
+
+                button.main-button-color.mw-200.m-0-auto.popup-file--video--button(type="submit" disabled) Оставить отзыв
+                    +arrow('arrow-button')

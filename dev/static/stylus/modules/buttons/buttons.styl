@@ -1,0 +1,69 @@
+.main-button-transparent
+  display flex
+  position relative
+  justify-content center
+  align-items center
+  height 54px
+  background-color transparent
+  border: 2px solid #2F80ED;
+  font-family Ms500
+  font-size 14px
+  color #fff
+  margin-right 45px
+  transition all linear .2s
+  &:hover
+    background-color #2F80ED
+    color #fff
+    .icon-arrow-button
+      path
+        transition all linear .2s
+      #i-2,#i-3
+        stroke: #2F80ED;
+  &:active
+    transform scale(0.95)
+  .icon-arrow-button
+    absolute-center()
+    right: -40px;
+    left: auto;
+    width: 40px;
+    height: 20px;
+    fill transparent
+    stroke: #fff;
+    stroke-width: 2px
+.mw-200
+  width 200px
+
+.main-button-color
+  display flex
+  position relative
+  justify-content center
+  align-items center
+  height 54px
+  background-color #2F80ED
+  border: 2px solid #2F80ED;
+  font-family Ms500
+  font-size 14px
+  color #fff
+  margin-right 45px
+  transition all linear .2s
+  &:hover
+    background-color #2F80ED
+    color #fff
+    .icon-arrow-button
+      path
+        transition all linear .2s
+  &:active
+    transform scale(1.1)
+  .icon-arrow-button
+    absolute-center()
+    right: -40px;
+    left: auto;
+    width: 40px;
+    height: 20px;
+    fill transparent
+    stroke: #fff;
+    stroke-width: 2px
+    #i-2,#i-3
+      stroke: #2F80ED;
+.m-0-auto
+  margin 0 auto

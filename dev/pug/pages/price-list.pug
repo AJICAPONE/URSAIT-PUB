@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Прайс-лист'
+    - var pageClass = 'index-page'
+
+block content
+    include price-list/section1
+    include ../modules/breadcrumbs
+    include price-list/section2

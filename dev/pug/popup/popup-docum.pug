@@ -1,0 +1,47 @@
+#popup-docum.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Перевод документов
+                    span
+                .popup-load-you-file
+                    .popup-load-you-zone
+                    input.popup-load-you-input(type="file" multiple)
+                    .popup-load-you-info
+                        .popup-load-you-title Загрузить файл
+                        .popup-load-you-desc (нажмите или перетащите файл сюда)
+                .popup-load--file--wrap
+
+            .popup-middle
+                .popup-input-wrap.mb-0
+
+                    .input-ur-forms--wrap
+                        input.input-ur-forms.mb-30(type="text" placeholder="Фамилия")
+                        input.input-ur-forms.mb-30.mask-phone(type="tel" placeholder="Телефон")
+
+                    .input-ur-forms--wrap
+
+                        textarea.textarea-forms.mb-30.w-100(cols="5" rows="5" placeholder="Комменатрий")
+
+
+            .popup-bottom
+                .popup-title Способ получения
+                .popup-pay-method
+                    .popup-pay-online.popup-checkbox-style
+                        label
+                            input.popup-pay-checked-input(type="radio" name="pay_type")
+                            .popup-pay-check
+                                .popup-pay-dot
+                                .popup-pay-title Доставка службой
+                    .popup-pay-nal.popup-checkbox-style
+                        label
+                            input.popup-pay-checked-input(type="radio" name="pay_type")
+                            .popup-pay-check
+                                .popup-pay-dot
+                                .popup-pay-title Получение в офисе
+
+                input.input-ur-forms.mb-30.w-100(type="text" placeholder="Адрес доставки")
+                button.main-button-color.mw-200.m-0-auto(type="submit") Оплатить
+                    +arrow('arrow-button')

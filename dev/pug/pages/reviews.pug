@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Отзывы клиентов'
+    - var pageClass = 'index-page'
+
+block content
+    include reviews/section1
+    include ../modules/breadcrumbs
+    include reviews/section2

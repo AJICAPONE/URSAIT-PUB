@@ -1,0 +1,55 @@
+.support-button--wrap
+    .support-button
+        +icon('help')
+    .support-consult
+        .support-consult-top
+            span Чат с консультантом
+            .support-consult-close
+                +icon('close')
+        .support-consult-middle
+            .support-consult--annotation
+                .support-consult--annotation__icon
+                    +icon('man')
+                .support-consult--annotation__text Наши консультанты ответят Вам в самое ближайщее время
+            .support-consult--messages
+                .support-consult-people-messages.support-consult-message-in
+                    .support-consult-message--wrappper
+                        .support-consult-message--block
+                            .support-consult-message--block__top
+                               .support-consult-message--block__name Сергей
+                               .support-consult-message--block__time 13:22
+                            .support-consult-message--block__text Facilisis eleifend purus sed sit. Tristique at tellus.
+                .support-consult-people-messages.support-consult-message-out
+                    .support-consult-message--wrappper
+                        .support-consult-message--block
+                            .support-consult-message--block__top
+                               .support-consult-message--block__name Михаил Кокорин
+                               .support-consult-message--block__time 13:21
+                            .support-consult-message--block__text Facilisis eleifend purus sed sit. Tristique at tellus.
+        .support-consult-bottom
+            .support-consult-file-wrap.personal-appear--file--wrap
+            .support-consult-smiles.row
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji1.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji2.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji3.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji4.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji5.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji6.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji7.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji8.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji9.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji10.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji11.png")
+                img.support-consult-smiles__item(src="./static/img/general/emoji/emoji12.png")
+            .support-consult-textarea--wrap
+                .support-consult-textarea#support-consult-msg(contenteditable)
+                .support-consult-placeholder Введите сообщение
+            .support-consult-navbar
+                .support-consult-smile-addfile
+                    .support-consult-smile.sc-size
+                        +icon('smile')
+                    .support-consult-addfile.sc-size
+                        +icon('skrepka')
+                        input.support-consult-addfile--input.chat-container-footer--input__file(type="file")
+                .support-consult-send.sc-size
+                    +icon('direct')

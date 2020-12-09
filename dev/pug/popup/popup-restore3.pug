@@ -1,0 +1,15 @@
+#popup-restore3.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Восстановление пароля
+                    span
+                .popup-annotation-text.m-40px Введите новый пароль
+            .popup-middle
+                .popup-input-wrap.m-40px
+                    input.input-ur-forms.mb-30(type="password" placeholder="Укажите новый пароль")
+                    input.input-ur-forms.mb-30(type="password" placeholder="Подтвердите новый пароль")
+                button.main-button-color.mw-200.m-0-auto Продолжить
+                    +arrow('arrow-button')

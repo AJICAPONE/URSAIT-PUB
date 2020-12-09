@@ -1,0 +1,269 @@
+header
+  position fixed
+  left 0
+  right 0
+  top 0
+  z-index 1000
+  transition .1s ease-in
+.header-top--center__list
+  display flex
+  align-items: center
+.header-services
+  position: relative
+  display none
+  cursor pointer
+  margin-right: 20px !important
+  .icon 
+    fill #2F80ED 
+.header-services--list__wrap,.header-top--profile--list__wrap
+  position: absolute
+  display none
+  top: 23px
+  right 0 
+  z-index 2
+.header-top--profile--list__wrap
+  top 36px
+.header-top--profile--list
+  display flex
+  flex-direction: column
+  position: relative
+  right 0
+  margin-top: 44px;
+  padding: 20px
+  background: linear-gradient(0deg, rgba(30,37,71,0.75), rgba(30,37,71,0.75)), rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  will-change: transform;
+  min-width 200px
+  &:before
+    content: '';
+    clip-path: polygon(50% 10%, 0% 100%, 100% 100%);
+    width: 17px;
+    height: 17px;
+    right: 18px;
+    top: -17px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(30,37,71,0.75), rgba(30,37,71,0.75)), rgba(255,255,255,0.2);
+  a
+    color: #fff !important
+    margin-bottom: 15px
+    font-family: 'Montserrat 500', sans-serif;
+    font-size 13px
+    &:last-child
+      margin-bottom: 0
+    &:hover
+      color: #2F80ED !important
+.header-services--list
+  display flex
+  flex-direction: column
+  position: relative
+  margin-top: 44px;
+  padding: 20px
+  background: linear-gradient(0deg, rgba(30,37,71,0.75), rgba(30,37,71,0.75)), rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  min-width: 280px;
+  will-change: transform;
+  &:before 
+    content: '';
+    clip-path: polygon(50% 10%, 0% 100%, 100% 100%);
+    width: 24px;
+    height: 24px;
+    right: 75px;
+    top: -23.8px;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(30,37,71,0.75), rgba(30,37,71,0.75)), rgba(255,255,255,0.2);
+  a  
+    color: #fff !important
+    margin-bottom: 15px
+    &:last-child 
+      margin-bottom: 0
+    &:hover 
+      color: #2F80ED !important  
+
+
+header.active
+  background-color #fff
+  .header-services span 
+    color: #272727
+  .header-top--logo .icon
+    transition .2s ease-in
+    fill #272727
+  .header-top--center__item
+    transition .2s ease-in
+    color #272727
+    &:hover
+      color #2F80ED
+  .header-top--phone__link
+    transition .2s ease-in
+    color #272727
+    &:hover
+      color #2F80ED
+  .header-bottom-menu--link
+    transition .2s ease-in
+    color #272727
+    &:hover
+      color #2F80ED
+  .blur-effect
+    transition .2s ease-in
+    background #F9F9F9
+  .header-top--profile
+    transition .2s ease-in
+    box-shadow 0 0 0 7px #f1f1f1;
+    position relative
+.header-top .container
+  display flex
+  align-items center
+  justify-content space-between
+.header-top--logo
+  margin-right 90px
+  .icon
+    size(120px, 104px)
+    fill #fff
+.header-top--center__item,.header-services
+  font-family Ms500
+  font-size 15px
+  margin-right 70px
+  color #fff
+
+.header-top--phone
+  margin-right 40px
+  .icon
+    size(22px)
+    margin-right 15px
+    fill #2F80ED
+.header-top--phone__link
+  font-family Ms600
+  color #fff
+.header-top--profile
+  position relative
+  size(56px)
+  border-radius 50%
+  background-repeat no-repeat
+  background-size cover
+  background-position center
+  box-shadow 0 0 0 7px rgba(255,255,255, 0.15)
+  cursor pointer
+.header-top--profile__notific
+  position absolute
+  display flex
+  justify-content center
+  align-items center
+  font-family Os600
+  size(20px)
+  color #fff
+  font-size 12px
+  border-radius 50%
+  background-color #2F80ED
+  right: -5px;
+  top: -5px;
+.header-top--contact
+  display flex
+  align-items center
+.header-services
+  display flex
+  align-items center
+  .icon
+    size(30px)
+    margin-right 20px
+
+.blur-effect
+  position absolute
+  width 100%
+  height 66px
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+.header-bottom-menu--links
+  display flex
+  align-items center
+  justify-content space-between
+  position relative
+
+
+.header-bottom-menu--link
+  display flex
+  position relative
+  justify-content center
+  align-items center
+  height 66px
+  font-family Ms500
+  color #fff
+  font-size 14px
+  transition all linear .2s
+  cursor pointer
+  //will-change transform
+
+  &:hover
+    text-shadow: 0px 0px 9px rgba(47, 128, 237, 0.4);
+    color #2F80ED
+
+.header-menu-hover
+  position absolute
+  top 66px
+  left 0
+  display none
+  z-index 20
+
+.header-bottom-menu--child2,.header-bottom-menu--child3
+  position relative
+  padding 20px
+  display flex
+  flex-direction column
+  margin-top 30px
+  background: linear-gradient(0deg, rgba(30, 37, 71, 0.75), rgba(30, 37, 71, 0.75)), rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  min-width 280px
+  will-change transform
+  &:before
+    content ''
+    clip-path: polygon(50% 10%, 0% 100%, 100% 100%);
+    size(24px)
+    left 30px
+    top -23.8px
+    position absolute
+    background: linear-gradient(0deg, rgba(30, 37, 71, 0.75), rgba(30, 37, 71, 0.75)), rgba(255, 255, 255, 0.2);
+  .header-bottom-menu--link--child2,.header-bottom-menu--link--child3
+    color #fff
+    font-family Ms400
+    font-size 13px
+    width max-content
+    margin-bottom 25px
+    &:last-child
+      margin-bottom 0
+    &:hover
+      text-shadow: 0px 0px 9px rgba(47, 128, 237, 0.4);
+      color #2F80ED
+.hover-right
+  right 0
+  left auto
+  .header-bottom-menu--child2
+    &:before
+      right 30px
+      left auto
+.header-menu-child2-sub2
+  font-family Ms500 !important
+  font-size 14px !important
+.header-menu-flex-childs
+  flex-direction row-reverse
+
+.header-bottom-menu--child3
+  display none
+  background: linear-gradient(0deg, rgba(30, 37, 71, 0.75), rgba(30, 37, 71, 0.75)), rgba(255, 255, 255, 0.1);
+  &:before
+    display none
+.hover-right
+  .header-bottom-menu--child3
+    border-right 1px solid rgba(255,255,255, 0.1)
+
+.header-bottom-menu--child3.active
+  display flex
+.mobile-sandwich-menu--button 
+  display none
+  .icon 
+    size(36px)
+    fill #2F80ED
+    
+
+
+
+
+
+

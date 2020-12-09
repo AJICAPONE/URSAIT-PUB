@@ -1,0 +1,138 @@
+header
+
+    .header-top
+        .container
+            .header-top--logo.header-mobile-sandwich-menu
+                +icon('logo')
+                .mobile-sandwich-menu--button.mobile-sandwich-menu--button-m
+                    +icon('services')
+            .header-top--menu
+                ul.header-top--center__list
+                    a.header-top--center__item(href="/") Главная
+                    a.header-top--center__item(href="/") О компании
+                    a.header-top--center__item(href="/") Прайс-лист
+                    a.header-top--center__item(href="/") Контакты
+                    a.header-top--center__item(href="/") Контакты2
+
+            .header-top--contact
+                .header-top--phone
+                    +icon('phone')
+                    a.header-top--phone__link(href="tel:89991234567") 8 (999) 123 45 67
+                .header-top--profile(style="background-image:url('./static/img/general/profile/profile.png')" data-toggle="modal" data-target="#popup-auth")
+                    .header-top--profile__notific 2
+                    .header-top--profile--list__wrap
+                        ul.header-top--profile--list
+                            a.header-top--profile--link(href="/") Мой профиль
+                            a.header-top--profile--link(href="/") Выход
+
+
+            .mobile-sandwich-menu--button.mobile-sandwich-menu--button-t
+                    +icon('services')
+            .mobile-sandwich-menu
+                .mobile-sandwich-close
+                    +icon('close')
+                .mobile-sandwich-menu--content
+                    .mobile-sandwich-menu--logo
+                        +icon('logo')
+                    ul.mobile-sandwich-menu--list
+                        a.mobile-sandwich-menu--item Комплексный экзамен
+                        a.mobile-sandwich-menu--item Оформление РВП
+                        a.mobile-sandwich-menu--item Оформление ВНЖ
+                        a.mobile-sandwich-menu--item Гражданство РФ
+                        a.mobile-sandwich-menu--item Статус НРЯ
+                        a.mobile-sandwich-menu--item Сопутствующие услуги
+                        a.mobile-sandwich-menu--item Документы
+                    .main-block--social.main-block--social--mobile
+                        a(href="/")
+                            +icon('facebook')
+                        a(href="/")
+                            +icon('twitter')
+                        a(href="/")
+                            +icon('whatsapp')
+
+
+
+
+
+    .header-bottom
+        .blur-effect
+        .container
+            ul.header-bottom-menu--links
+                .header-bottom-menu--link Комплексный экзамен
+                    .header-menu-hover
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child2(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Оформить пенсию по ВНЖ
+                .header-bottom-menu--link Оформление РВП
+                    .header-menu-hover
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child2(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Оформить пенсию по ВНЖ
+                .header-bottom-menu--link Оформление ВНЖ
+                    .header-menu-hover
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child2(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Оформить пенсию по ВНЖ
+                .header-bottom-menu--link Гражданство РФ
+                    .header-menu-hover
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child2(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Оформить пенсию по ВНЖ
+                .header-bottom-menu--link Статус НРЯ
+                    .header-menu-hover
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child2(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child2(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child2(href="/") Оформить пенсию по ВНЖ
+                .header-bottom-menu--link Еще 2 услуги
+                    .header-menu-hover.hover-right.header-menu-flex-childs
+                        .header-bottom-menu--child2
+                            a.header-bottom-menu--link--child2.header-menu-child2-sub2(href="/") Сопутствующие услуги
+                            a.header-bottom-menu--link--child2.header-menu-child2-sub2(href="/") Документы
+                        .header-bottom-menu--child3
+                            a.header-bottom-menu--link--child3(href="/") Оформить ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child3(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child3(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") Регистрация по ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") Временная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") Постоянная регистрация по ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") Оформить пенсию по ВНЖ
+                        .header-bottom-menu--child3
+                            a.header-bottom-menu--link--child3(href="/") Оформить ВНЖ2
+                            a.header-bottom-menu--link--child3(href="/") ВНЖ для ВКС
+                            a.header-bottom-menu--link--child3(href="/") ВНЖ детям
+                            a.header-bottom-menu--link--child3(href="/") Замена ВНЖ
+                            a.header-bottom-menu--link--child3(href="/") Регистрация по ВНЖ
+
+
+
