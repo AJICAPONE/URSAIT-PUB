@@ -1,0 +1,36 @@
+#popup-test-granted.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.popup-w-430(role='document')
+        form.modal-content
+            .popup-header
+                .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
+                    +icon('close')
+                .form-title Тест пройден!
+
+            .popup-middle
+                table.table-test--info
+                    thead
+                        tr
+                            th Субтест
+                            th Баллы
+                            th Порог
+                    tbody
+                        tr
+                            td Граматика
+                            td.table-color--green 70
+                            td 60/100
+                        tr
+                            td Чтение
+                            td.table-color--green 80
+                            td 60/100
+                        tr
+                            td История
+                            td.table-color--green 60
+                            td 50/100
+                        tr
+                            td Законодательство
+                            td.table-color--green 70
+                            td 60/100
+
+                .main-button-color.mw-200.m-0-auto Запись на экзамен
+                    +arrow('arrow-button')
+                .table-test--button Пройти тест заново

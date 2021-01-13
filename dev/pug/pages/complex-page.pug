@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Комплексный экзамен для мигрантов'
+    - var pageClass = 'index-page'
+
+block content
+    include complex-page/section1
+    include ../modules/breadcrumbs
+    include complex-page/section2
