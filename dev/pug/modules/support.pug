@@ -43,6 +43,7 @@
                 img.support-consult-smiles__item(src="./static/img/general/emoji/emoji12.png")
             .support-consult-textarea--wrap
                 .support-consult-textarea#support-consult-msg(contenteditable)
+                .support-c
                 .support-consult-placeholder Введите сообщение
             .support-consult-navbar
                 .support-consult-smile-addfile
@@ -52,4 +53,5 @@
                         +icon('skrepka')
                         input.support-consult-addfile--input.chat-container-footer--input__file(type="file")
                 .support-consult-send.sc-size
+                    span.support-consult-counts--text 0/200
                     +icon('direct')

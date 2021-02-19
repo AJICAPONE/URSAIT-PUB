@@ -7,16 +7,17 @@
                 .form-title Войдите в свой аккаунт
                     span
             .popup-middle
-                .popup-input-wrap.m-40px
+                .popup-input-wrap.m-40px.mobile-mb-15
                     input.input-ur-forms.mb-30(type="text" placeholder="Login")
                     input.input-ur-forms(type="password" placeholder="Пароль")
                 .popup-checkbox-wrap.m-40px
-                    .popup-remember-me
+                    .popup-remember-me.mobile-mb-30
                         input#remember-me.checkbox-form(type="checkbox")
                         label(for="remember-me") Запомнить меня
                     a.popup-forgot-password(data-toggle="modal" data-dismiss="modal" data-target="#popup-restore") Забыли пароль?
-                button.main-button-color.mw-200.m-0-auto(type="submit") Войти
+                button.main-button-color.mw-200.m-0-auto.mobile-mb-25(type="submit") Войти
                     +arrow('arrow-button')
+                a.popup-forgot-password.popup-forgot-password--mobile(data-toggle="modal" data-dismiss="modal" data-target="#popup-restore") Забыли пароль?
             .popup-bottom
                 .popup-have-acc Еще нет аккаунта?
                     span(data-dismiss="modal" data-toggle="modal" data-target="#popup-reg") Создать аккаунт

@@ -28,10 +28,13 @@
               <ul class="header-top--center__list"><a class="header-top--center__item" href="/">Главная</a><a class="header-top--center__item" href="/">О компании</a><a class="header-top--center__item" href="/">Прайс-лист</a><a class="header-top--center__item" href="/">Контакты</a><a class="header-top--center__item" href="/">Контакты2</a></ul>
             </div>
             <div class="header-top--contact">
-              <div class="header-top--phone">
-                <svg class="icon icon-phone ">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#phone"></use>
-                </svg><a class="header-top--phone__link" href="tel:89991234567">8 (999) 123 45 67</a>
+              <div class="header-top--phone--wrap">
+                <div class="header-top--phone">
+                  <svg class="icon icon-phone ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#phone"></use>
+                  </svg><a class="header-top--phone__link" href="tel:89991234567">8 (999) 123 45 67</a>
+                </div>
+                <div class="header-top--callback">Заказать звонок</div>
               </div>
               <div class="header-top--profile" style="background-image:url('./static/img/general/profile/profile.png');" data-toggle="modal" data-target="#popup-auth">
                 <div class="header-top--profile__notific">2</div>
@@ -56,6 +59,7 @@
                   <svg class="icon icon-logo ">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#logo"></use>
                   </svg>
+                  <div class="mobile-account--sandwich__logo" style="background-image:url('./static/img/general/profile/profile.png');" data-toggle="modal" data-target="#popup-auth"></div>
                 </div>
                 <ul class="mobile-sandwich-menu--list"><a class="mobile-sandwich-menu--item">Комплексный экзамен</a><a class="mobile-sandwich-menu--item">Оформление РВП</a><a class="mobile-sandwich-menu--item">Оформление ВНЖ</a><a class="mobile-sandwich-menu--item">Гражданство РФ</a><a class="mobile-sandwich-menu--item">Статус НРЯ</a><a class="mobile-sandwich-menu--item">Сопутствующие услуги</a><a class="mobile-sandwich-menu--item">Документы</a></ul>
                 <div class="main-block--social main-block--social--mobile"><a href="/">
@@ -271,23 +275,23 @@
                 <div class="form-title">Войдите в свой аккаунт<span></span></div>
               </div>
               <div class="popup-middle">
-                <div class="popup-input-wrap m-40px">
+                <div class="popup-input-wrap m-40px mobile-mb-15">
                   <input class="input-ur-forms mb-30" type="text" placeholder="Login">
                   <input class="input-ur-forms" type="password" placeholder="Пароль">
                 </div>
                 <div class="popup-checkbox-wrap m-40px">
-                  <div class="popup-remember-me">
+                  <div class="popup-remember-me mobile-mb-30">
                     <input class="checkbox-form" id="remember-me" type="checkbox">
                     <label for="remember-me">Запомнить меня</label>
                   </div><a class="popup-forgot-password" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore">Забыли пароль?</a>
                 </div>
-                <button class="main-button-color mw-200 m-0-auto" type="submit">Войти
+                <button class="main-button-color mw-200 m-0-auto mobile-mb-25" type="submit">Войти
                   <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
                     <path id="i-2" d="M34 8L0 8"></path>
                     <path id="i-1" d="M17 8L0 8"></path>
                     <path id="i-3" d="M27 1L34 8L27 15"></path>
                   </svg>
-                </button>
+                </button><a class="popup-forgot-password popup-forgot-password--mobile" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore">Забыли пароль?</a>
               </div>
               <div class="popup-bottom">
                 <div class="popup-have-acc">Еще нет аккаунта?<span data-dismiss="modal" data-toggle="modal" data-target="#popup-reg">Создать аккаунт</span></div>
@@ -1224,6 +1228,7 @@
               <div class="support-consult-smiles row"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji1.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji2.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji3.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji4.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji5.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji6.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji7.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji8.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji9.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji10.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji11.png"><img class="support-consult-smiles__item" src="./static/img/general/emoji/emoji12.png"></div>
               <div class="support-consult-textarea--wrap">
                 <div class="support-consult-textarea" id="support-consult-msg" contenteditable></div>
+                <div class="support-c"></div>
                 <div class="support-consult-placeholder">Введите сообщение</div>
               </div>
               <div class="support-consult-navbar">
@@ -1240,7 +1245,7 @@
                     <input class="support-consult-addfile--input chat-container-footer--input__file" type="file">
                   </div>
                 </div>
-                <div class="support-consult-send sc-size">
+                <div class="support-consult-send sc-size"><span class="support-consult-counts--text">0/200</span>
                   <svg class="icon icon-direct ">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#direct"></use>
                   </svg>
@@ -1388,8 +1393,14 @@
     </div>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/libs.min.js"></script>
-    <script src="static/js/main.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
     <script src="static/js/jquery.hoverIntent.min.js"></script>
     <script src="static/js/datepicker.ru-RU.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <!--script.-->
+    <!--	$(document).ready(function () {-->
+    <!--		$(".ui-slider-handle").draggable({axis: "x"});-->
+    <!--	});-->
   </body>
 </html>

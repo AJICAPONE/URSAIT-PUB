@@ -15,9 +15,11 @@ header
                     a.header-top--center__item(href="/") Контакты2
 
             .header-top--contact
-                .header-top--phone
-                    +icon('phone')
-                    a.header-top--phone__link(href="tel:89991234567") 8 (999) 123 45 67
+                .header-top--phone--wrap
+                    .header-top--phone
+                        +icon('phone')
+                        a.header-top--phone__link(href="tel:89991234567") 8 (999) 123 45 67
+                    .header-top--callback Заказать звонок
                 .header-top--profile(style="background-image:url('./static/img/general/profile/profile.png')" data-toggle="modal" data-target="#popup-auth")
                     .header-top--profile__notific 2
                     .header-top--profile--list__wrap
@@ -34,6 +36,7 @@ header
                 .mobile-sandwich-menu--content
                     .mobile-sandwich-menu--logo
                         +icon('logo')
+                        .mobile-account--sandwich__logo(style="background-image:url('./static/img/general/profile/profile.png')" data-toggle="modal" data-target="#popup-auth")
                     ul.mobile-sandwich-menu--list
                         a.mobile-sandwich-menu--item Комплексный экзамен
                         a.mobile-sandwich-menu--item Оформление РВП

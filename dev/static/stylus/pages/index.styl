@@ -2,6 +2,16 @@
 	background-size 125%
 	background-repeat no-repeat
 	background-position top center
+.header-top--phone--wrap
+	display flex
+	flex-direction column
+	align-items center
+.header-top--callback
+	font-family 'Montserrat 500',sans-serif
+	font-size 16px
+	color #fff
+	cursor pointer
+	transition all linear .2s
 
 .main-block--social
 	display flex
@@ -72,7 +82,7 @@
 	margin-bottom 15px
 .content-item-ur__title
 	font-family Cm700
-	font-size 18px
+	font-size 19px
 	color #272727
 	margin-bottom 10px
 	transition .3s ease-in
@@ -129,6 +139,7 @@
 .main-services--item
 	border: 1.5px solid rgba(39,39,39,0.05)
 	padding 25px
+	height 100%
 	.icon
 		size(50px)
 		fill #2F80ED
@@ -154,7 +165,7 @@
 
 .services-main--block
 	background: #F9F9F9;
-	border: 3px solid #20253E;
+	border: 2px solid #20253E;
 	border-radius: 10px
 	margin 0 -100px
 	padding 60px 100px
@@ -240,6 +251,7 @@
 	font-family Cm700
 	font-size 23px
 	color #272727
+
 .special-left--block__price
 	font-family Cm700
 	font-size 23px
@@ -366,6 +378,7 @@
 .tabs-buttons.active
 	background-color #2F80ED
 	border: 1.5px solid #2F80ED;
+	color #fff
 .reveiw-tab-text--item
 	display flex
 	align-items flex-end
@@ -386,7 +399,7 @@
 	background-size contain
 	background-repeat no-repeat
 	width: 267px;
-	height: calc(100% + 50px);
+	height: calc(100% + 40px);
 	display: flex;
 	align-items: flex-end;
 	background-position: bottom;
@@ -426,7 +439,7 @@
 	font-family Cm700
 	font-size 15px
 	color #272727
-
+	cursor pointer
 	&:last-child
 		margin-right 0
 .blog-article-date
@@ -459,6 +472,17 @@
 	font-size 13px
 	color rgba(39,39,39,0.7)
 	margin-bottom 25px
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	word-wrap: break-word;
+	-o-text-overflow: ellipsis;
+	-ms-line-clamp: 5;
+	-webkit-line-clamp: 5;
+	line-clamp: 5;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
 .blog-article-link
 	font-family Cm700
 	font-size 17px
@@ -937,10 +961,10 @@
 	padding 40px
 	background-repeat no-repeat
 	background-size cover
-	width 45%
+	width 50%
 	border-radius: 10px 0 0 10px;
 .section-have-question__right
-	width 55%
+	width 50%
 	padding 30px
 	border-radius: 0px 10px 10px 0;
 	box-shadow: 0px 4px 30px -7px rgba(0, 0, 0, 0.13);
@@ -1578,8 +1602,21 @@
 	height 100%
 	background: #252B4A
 	width calc(100vw - 55px)
+.mobile-account--sandwich__logo
+	display flex
+	justify-content center
+	align-items center
+	size(34px)
+	border-radius 50%
+	background-size cover
+	background-repeat no-repeat
+	box-shadow 0 0 0 5px rgba(255,255,255,0.15)
 .mobile-sandwich-menu--logo
+	display flex
+	justify-content space-between
+	align-items center
 	padding-left: 15px
+	padding-right 15px
 	padding-bottom: 15px
 	margin: 0 -15px
 	border-bottom: 1px solid rgba(255,255,255,0.1)
@@ -1898,3 +1935,18 @@ header.active
 	box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.1);
 	.header-bottom
 		display none
+	.header-top--callback
+		color #272727
+.support-consult-counts--text
+	position relative
+	color rgba(33,33,33,0.4)
+	font-size 11px
+	font-family 'Montserrat 500',sans-serif
+	margin-right 15px
+.popup-forgot-password--mobile
+	display none
+.about-company-name__left
+	.img-style
+		display none
+.news-aside--list__js
+	display none
