@@ -9,7 +9,14 @@
             .popup-middle
                 .popup-input-wrap.m-40px.mobile-mb-15
                     input.input-ur-forms.mb-30(type="text" placeholder="Login")
-                    input.input-ur-forms(type="password" placeholder="Пароль")
+                    .popup-password--wrap
+                        .popup-password--notific
+                            .popup-password--title.popup-password--not-text Требования к формированию пароля:
+                            .popup-password--symbol.popup-password--not-text Не менее 8 символов
+                            .popup-password--word.popup-password--not-text Одна буква должна быть заглавной
+                            .popup-password--number.popup-password--not-text Должна быть как минимум одна цифра
+                            .popup-password--complite.popup-password--not-text.active Пароль и подтверждение пароля должны совпадать
+                        input.input-ur-forms.w-100.popup-password--change(type="password" placeholder="Пароль")
                 .popup-checkbox-wrap.m-40px
                     .popup-remember-me.mobile-mb-30
                         input#remember-me.checkbox-form(type="checkbox")

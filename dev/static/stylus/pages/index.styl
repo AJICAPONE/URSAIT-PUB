@@ -416,7 +416,6 @@
 	padding: 23px
 	size(100%)
 	position relative
-
 	.icon
 		position absolute
 		right 20px
@@ -640,7 +639,7 @@
 
 .section-sidebar
 	position sticky
-	top 210px
+	top 115px
 	display inline-table
 	padding-left 0
 	margin-bottom 50px
@@ -1950,3 +1949,227 @@ header.active
 		display none
 .news-aside--list__js
 	display none
+.popup-choise--country
+	margin-bottom 40px
+	position relative
+	width 100%
+	max-width 230px
+	margin 0 auto
+.popup-choise--country__list
+	display none
+	position absolute
+	background-color #fff
+	box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.05);
+	padding 15px
+	width 100%
+.popup-choise--country__item
+	font-family 'Montserrat 400',sans-serif
+	font-size 14px
+	color #272727
+	margin-bottom 10px
+	cursor pointer
+	&:last-child
+		margin-bottom 0
+.popup-choise--country--input
+	display flex
+	align-items center
+	justify-content space-between
+	background-color #FFFFFF
+	box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	padding 15px
+	cursor pointer
+	margin-bottom 15px
+	width 100%
+	.icon
+		size(10px)
+		fill #272727
+	span
+		font-family 'Montserrat 400',sans-serif
+		font-size 14px
+		color #272727
+.popup-choise--country__item.active
+	font-weight bold
+.popup-exam--item
+	font-family 'Montserrat 500',sans-serif
+	font-size 15px
+	color #272727
+	margin-bottom 20px
+	display block
+	cursor pointer
+	&:last-child
+		margin-bottom 0
+.popup-exam--list
+	position relative
+	padding 25px
+	left 0
+	right 0
+	z-index 2
+	border-radius 10px
+	width 100%
+	display none
+	background-color #EEF2F8
+	margin-bottom 40px
+	margin-top -10px
+	padding-top 35px
+.popup-exam-reg
+	position relative
+	cursor pointer
+	z-index 3
+.popup-exam--arrow
+	.icon
+		size(14px)
+		fill #2F80ED
+.popup-exam-reg__wrap
+	margin-bottom 40px
+.reveiw-tab-text .reveiw-button-show-more
+	margin 0 !important
+	margin-right 30px !important
+.review-flex-buttons
+	display flex
+	align-items center
+	justify-content center
+.reveiw-button-add-review
+	margin 0 !important
+	color #2f80ed
+.popup-w-770
+	max-width 770px
+.popup-select--wrap
+	display flex
+	justify-content space-between
+	align-items center
+	background-color: transparent;
+	border-radius: 5px;
+	border: 1.5px solid rgba(39,39,39,0.05);
+	height: 47px;
+	padding: 15px;
+	font-family: 'Montserrat 400', sans-serif;
+	font-size: 13px;
+	color: rgba(39,39,39,0.7);
+	outline: none;
+	margin-bottom 30px
+	position relative
+	.icon
+		size(14px)
+		fill #333333
+.popup-select--list
+	position absolute
+	display none
+	top 50px
+	left 0
+	right 0
+	width 100%
+	background-color #fff
+	border: 1.5px solid rgba(39,39,39,0.05);
+	border-radius 5px
+	padding 10px
+.popup-select--item
+	font-family 'Montserrat 400',sans-serif
+	font-size 13px
+	color #272727
+	margin-bottom 10px
+	&:last-child
+		margin-bottom 0
+.popup-select--wrap.active
+	.icon
+		transform rotate(180deg)
+.popup-password--wrap
+	position relative
+	width 100%
+.popup-password--notific
+	pointer-events none
+	opacity 0
+	transition all linear .3s
+	position absolute
+	background-color #fff
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	padding 15px
+	top -188px
+	right 0
+	&:before
+		content ''
+		position absolute
+		right 20px
+		bottom -15px
+		clip-path: polygon(100% 0, 0 0, 50% 100%);
+		size(20px)
+		background-color #fff
+.popup-password--notific.active
+	opacity 1
+	pointer-events auto
+.popup-password--not-text
+	font-family 'Open Sans 400',sans-serif
+	font-size 13px
+	color #272727
+	margin-bottom 10px
+	&:last-child
+		margin-bottom 0
+.popup-password--title
+	color rgba(39, 39, 39, 0.6);
+.popup-password--symbol.active,.popup-password--word.active,.popup-password--number.active,.popup-password--complite.active
+	color #09B983
+.popup-password--change.changed
+	border: 1.5px solid rgba(244, 57, 48, 0.7);
+	background-color rgba(244, 57, 48, 0.1);
+	color #F43930
+.popup-restore--code.active
+	border: 1.5px solid rgba(244, 57, 48, 0.7);
+	background-color rgba(244, 57, 48, 0.1);
+	color #F43930
+.popup-password--notific.popup-display
+	opacity 0
+	pointer-events none
+.popup-agree--rules
+	display none
+	font-family 'Montserrat 500',sans-serif
+	font-size 14px
+	color #F43930
+	border-bottom 1.5px solid #F43930
+	padding-bottom 4px
+	width max-content
+	margin-left 27px
+.popup-rem--agree
+	display flex
+	flex-direction column
+.popup-agree--rules.active
+	display flex
+.popup-restore--code
+	margin-bottom 20px
+.popup-send-code--again
+	display none
+	font-family 'Cormorant 700',sans-serif
+	font-size 18px
+	color #2F80ED
+	text-align center
+	margin-bottom 20px
+	cursor pointer
+.popup-send-code--again.active
+	display block
+.popup-timer--wrapper
+	display none
+	align-items center
+	justify-content center
+.popup-timer--wrapper.active
+	display flex
+.timer-wrapper
+	display flex
+	align-items center
+	font-family 'Montserrat 500',sans-serif
+	font-size 14px
+	color #2F80ED
+	font-weight bold
+.timer-section
+	display flex
+	align-items center
+.popup-timer--text
+	font-family 'Montserrat 500',sans-serif
+	font-size 14px
+	color #272727
+	margin-right 4px
+#message
+	text-align center
+	font-family 'Montserrat 500',sans-serif
+	font-size 14px
+	color #272727
+

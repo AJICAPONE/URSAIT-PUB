@@ -6,27 +6,43 @@
                     +icon('close')
                 .form-title Запись на экзамен
                     span
-                .popup-exam-reg.mr-0.ml-0
-                    .popup-exam-icon
-                        +icon('home2')
-                    .popup-exam-content
-                        .popup-exam-title Оформление вида на жительство
-                        .popup-exam-desc Комплексное тестирование для получения разрешения на работу
+                .popup-exam-reg__wrap
+                    .popup-exam-reg.mr-0.ml-0.mb-0
+                        .popup-exam-icon
+                            +icon('home2')
+                        .popup-exam-content
+                            .popup-exam-title Оформление вида на жительство
+                            .popup-exam-desc Комплексное тестирование для получения разрешения на работу
+                        .popup-exam--arrow
+                            +icon('arrow-down')
+
+                    .popup-exam--list
+                        .popup-exam--item Оформление Вида на жительство (ВНЖ) – 28 500 ₽
+                        .popup-exam--item Оформление Гражданства – 40 200 ₽
+                        .popup-exam--item Оформление Временного проживания (РВП) – 30 800 ₽
+
+                .popup-choise--country
+                    .popup-choise--country--input
+                        span Россия
+                        +icon('arrow-down')
+                    .popup-choise--country__list
+                        .popup-choise--country__item(data-tel-mask="+7(000) 000 00 00") Россия
+                        .popup-choise--country__item(data-tel-mask="(+900 00) 000-00-00")  Узбекистан
             .popup-middle
                 .popup-input-wrap.mb-0
 
                     .input-ur-forms--wrap
-                        input.input-ur-forms.mb-30(type="text" placeholder="Фамилия")
-                        input.input-ur-forms.mb-30.mask-phone(type="tel" placeholder="Телефон")
+                        input.input-ur-forms.mb-30(type="text" placeholder="Фамилия" required)
+                        input.input-ur-forms.mb-30.country-tel(type="tel" placeholder="Телефон" data-mask="+7(000) 000 00 00" required)
 
                     .input-ur-forms--wrap
-                        input.input-ur-forms.mb-30(type="text" placeholder="Имя")
-                        input.input-ur-forms.mb-30(type="email" placeholder="Email")
+                        input.input-ur-forms.mb-30(type="text" placeholder="Имя" required)
+                        input.input-ur-forms.mb-30(type="email" placeholder="Email" required)
 
                     .input-ur-forms--wrap
                         input.input-ur-forms(type="text" placeholder="Отчество")
                         .input-ur-date
-                            input.input-ur-forms.mask-date.date-exam(type="text" placeholder="Дата экзамена" )
+                            input.input-ur-forms.mask-date.date-exam(type="text" placeholder="Дата экзамена" required readonly)
                             +icon('calendar')
                             .ur-show-calendar
                                 .popup-calendar--date__exam__wrap
@@ -82,6 +98,6 @@
                     .input-promo.input-ur-forms.activate-promo--input__wrap
                         input(type="text" placeholder="Промокод")
                         span.activate-promo Активировать
-                button.main-button-color.mw-200.m-0-auto(type="submit") Оплатить
+                .main-button-color.mw-200.m-0-auto(data-toggle="modal" data-dismiss="modal" data-target="#popup-exam-ok") Оплатить
                     +arrow('arrow-button')
 

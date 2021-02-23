@@ -1,6 +1,6 @@
 #popup-restore2.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true')
     .modal-dialog.modal-dialog-centered.popup-w-570(role='document')
-        form.modal-content
+        form.modal-content#popup-restore--code--form
             .popup-header
                 .popup-close--icon.close(data-dismiss="modal" aria-label="Close")
                     +icon('close')
@@ -9,6 +9,19 @@
                 .popup-annotation-text.m-40px На телефон +7 999 *** ** 67 был отправлен код подтверждения, введите его ниже
             .popup-middle
                 .popup-input-wrap.m-40px
-                    input.input-ur-forms.mb-30.text-center.mask-code(type="text" placeholder="__ __ __ __")
+                    input.input-ur-forms.mb-30.text-center.popup-restore--code(type="text" placeholder="__ __ __ __" data-mask="0 0 0 0")
+                    .popup-timer--send
+                        .popup-send-code--again Получить код повторно
+                        .popup-timer--wrapper
+                            .popup-timer--text Повторное получение кода возможно через
+                            .timer-wrapper
+                                .timer-section
+                                    #min-dozens.timer 3
+                                    #min-unity.timer 0
+                                .timer-section--dots :
+                                .timer-section
+                                    #sec-dozens.timer 0
+                                    #sec-unity.timer 0
+                            p#message
                 .main-button-color.mw-200.m-0-auto(data-toggle="modal" data-dismiss="modal" data-target="#popup-restore3") Продолжить
                     +arrow('arrow-button')

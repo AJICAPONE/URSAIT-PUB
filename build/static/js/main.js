@@ -921,12 +921,13 @@ $(document).ready(function () {
         $('.contacts-tel-reg-list ').slideToggle(200);
     });
 
-    $('.contacts-tel-reg-item').on('click',function () {
+    $('.contacts-tel-reg-item').on('click',function (e) {
+        e.preventDefault();
         var get_code = $(this).attr('data-mask-phone');
         var get_flag = $(this).children('.contacts-tel-reg-item--flag').attr('style');
 
         $('.contacts-tel-reg--flag').attr('style',get_flag);
-        $(this).parents('.contacts-tel-reg--wrap').next('.mask-phone').mask(get_code);
+        $('.country-tel2').mask(get_code);
 
     });
 
@@ -1134,7 +1135,6 @@ $(document).ready(function () {
     $('[data-toggle="modal"]').click(function(){
         if($('.modal').hasClass('show')){
             $('body').addClass('modal-show');
-            console.log('dsad');
 
         }
     });
@@ -1200,10 +1200,165 @@ $(document).ready(function () {
     });
     var get_height = document.querySelector('.support-consult--messages');
     $('.support-consult-send').click(function () {
-        console.log(get_height.scrollHeight);
         $('.support-consult--messages').animate({scrollTop:get_height.scrollHeight}, 200);
+    });
 
+    $('.popup-choise--country--input').click(function () {
+        $('.popup-choise--country__list').slideToggle(200);
+    });
+    $('.popup-choise--country__item').on('click',function (e) {
+       e.preventDefault();
+       var get_text = $(this).text();
+       var get_attr = $(this).attr('data-tel-mask');
+       $(this).addClass('active').siblings().removeClass('active');
+       $('.popup-choise--country--input span').text(get_text);
+       $('.country-tel').mask(get_attr);
+       $('.popup-choise--country__list').slideUp(200);
+    });
+    $('.popup-exam-reg').click(function () {
+       $(this).toggleClass('active');
+       $(this).next('.popup-exam--list').slideToggle(200);
+    });
+
+    $('.popup-exam--item').click(function () {
+       var get_text = $(this).text();
+       $('.popup-exam-content .popup-exam-title').text(get_text);
+       $('.popup-exam--list').slideUp(200);
+    });
+    $('.popup-select--wrap').click(function () {
+        $(this).toggleClass('active');
+        $(this).children('.popup-select--list').slideToggle(200);
+    });
+    $('.popup-select--item').click(function () {
+       var get_text = $(this).text();
+       $(this).parents('.popup-select--wrap').children('.popup-select--input').text(get_text);
+    });
+
+    $(".popup-password--change").on('keyup keydown',function() {
+        var val = $(this).val();
+        var length = $(this).val().length;
+
+        if (length) {
+            $('.popup-password--notific').addClass('active');
+            $('.popup-password--change').addClass('changed');
+        } else if (length < 1) {
+            $('.popup-password--notific').removeClass('active');
+            $('.popup-password--change').removeClass('changed');
+        }
+        if (length == 8){
+            $('.popup-password--symbol').addClass('active');
+        } else if ($(this).val().length < 8) {
+            $('.popup-password--symbol').removeClass('active');
+        }
+
+        if (/^[A-Z]{1,}/.test(val)){
+            $('.popup-password--word').addClass('active');
+        } else {
+            $('.popup-password--word').removeClass('active');
+        }
+        if(/\d/.test(val)){
+            $('.popup-password--number').addClass('active');
+        } else {
+            $('.popup-password--number').removeClass('active');
+        }
+        if ($('.popup-password--symbol').hasClass('active') && $('.popup-password--word').hasClass('active') && $('.popup-password--number').hasClass('active') && $('.popup-password--complite').hasClass('active')){
+            $('.popup-password--notific').addClass('popup-display');
+            $('.popup-password--change').removeClass('changed');
+        } else {
+            $('.popup-password--notific').removeClass('popup-display');
+
+        }
+    });
+
+    $('#reg-form-main button').click(function () {
+       if($('.popup-checkbox-rules').prop('checked') == false){
+           $('.popup-agree--rules').addClass('active');
+       } else {
+           $('.popup-agree--rules').removeClass('active');
+       }
+    });
+
+    $('.popup-restore--code').on('keyup keydown',function () {
+        var length = $(this).val().length;
+        if($(this).val() === '0 0 0 0'){
+            $(this).removeClass('active');
+        } else if($(this).val() !== '0 0 0 0') {
+            $(this).addClass('active');
+            $('.popup-send-code--again').addClass('active');
+        }
+        if (length < 7){
+            $(this).removeClass('active');
+            $('.popup-send-code--again').removeClass('active');
+        }
     });
 
 
+
+
+    function countd() {
+        const eventDate = new Date().getTime() + 83 * 60 * 60;        // date of the Event we countdown - 1hr from refresh
+
+        const timer = setInterval(() => {
+            const actualTime = new Date().getTime();
+            const difference = eventDate - actualTime;
+            console.log(difference);
+
+            const minutes = difference % (1000 * 60 * 60) / (1000 * 60);
+            const seconds = difference % (1000 * 60) / 1000;
+
+            const minDozens = Math.floor(minutes / 10);
+            const minUnity = Math.floor(minutes % 10);
+            const secDozens = Math.floor(seconds / 10);
+            const secUnity = Math.floor(seconds % 10);
+
+            const hMinDozens = document.getElementById('min-dozens');
+            const hMinUnits = document.getElementById('min-unity');
+            const hSecDozens = document.getElementById('sec-dozens');
+            const hSecUnits = document.getElementById('sec-unity');
+
+            hMinDozens.innerHTML = minDozens;
+            hMinUnits.innerHTML = minUnity;
+            hSecDozens.innerHTML = secDozens;
+            hSecUnits.innerHTML = secUnity;
+
+            hMinDozens.classList.remove('timer-blur');
+            hMinUnits.classList.remove('timer-blur');
+            hSecDozens.classList.remove('timer-blur');
+            hSecUnits.classList.remove('timer-blur');
+
+            if(seconds % 1 < 0.3){
+                hSecUnits.classList.add('timer-blur'); // second update
+                if(secUnity == 0) {
+                    hSecDozens.classList.add('timer-blur');     // second dozens update
+                    if(secDozens == 0) {
+                        hMinUnits.classList.add('timer-blur');  // min update
+                        if(minUnity == 0) {
+                            hMinDozens.classList.add('timer-blur'); // min dozens update
+                        }
+                    }
+                }
+            }
+
+
+            if(difference < 0){
+                document.getElementById('message').innerHTML = "Код отправлен";
+
+                hSecUnits.classList.remove('timer-blur');
+
+                hMinDozens.innerHTML = 0;
+                hMinUnits.innerHTML = 0;
+                hSecDozens.innerHTML = 0;
+                hSecUnits.innerHTML = 0;
+                clearInterval(timer);
+            }
+        }, 200);
+    }
+    $('.popup-send-code--again').click(function () {
+        $(this).remove();
+        $('.popup-timer--wrapper').addClass('active');
+        countd();
+    });
+
+
+    
 });

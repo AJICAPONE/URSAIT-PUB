@@ -36,12 +36,12 @@ section.section2.padding-deafault-50.pt-0
                                         .contacts-tel-reg--flag(style="background-image:url('./static/img/content/ru.jpg')")
                                         .contacts-tel-reg--arrow 
                                             +icon('arrow-down')
-                                        ul.contacts-tel-reg-list 
-                                            li.contacts-tel-reg-item(data-mask-phone="(+900 00) 000-00-00")
+                                        ul.contacts-tel-reg-list
+                                            li.contacts-tel-reg-item(data-mask-phone="+(900 00) 00 00000")
                                                 .contacts-tel-reg-item--flag(style="background-image:url('./static/img/content/ru.jpg')")
-                                            li.contacts-tel-reg-item(data-mask-phone="+7 (000) 000-00-00")
-                                                .contacts-tel-reg-item--flag(style="background-image:url('./static/img/content/ru.jpg')")        
-                                    input.mask-phone(type="tel" minlength="18" requred placeholder="+7 (___) ___-__-__")
+                                            li.contacts-tel-reg-item(data-mask-phone="+7 (000) 000 00 00")
+                                                .contacts-tel-reg-item--flag(style="background-image:url('./static/img/content/ru.jpg')")
+                                    input.country-tel2(type="tel" placeholder="+7 (___) ___-__-__" data-mask="+7(000) 000 00 00" required)
                             textarea.textarea-forms.mb-4(cols="5" rows="4" placeholder="Комментарий...")
                             button.main-button-color.mw-200.m-0-auto(type="submit") Отправить
                                 +arrow('arrow-button')

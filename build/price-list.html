@@ -598,7 +598,16 @@
               <div class="popup-middle">
                 <div class="popup-input-wrap m-40px mobile-mb-15">
                   <input class="input-ur-forms mb-30" type="text" placeholder="Login">
-                  <input class="input-ur-forms" type="password" placeholder="Пароль">
+                  <div class="popup-password--wrap">
+                    <div class="popup-password--notific">
+                      <div class="popup-password--title popup-password--not-text">Требования к формированию пароля:</div>
+                      <div class="popup-password--symbol popup-password--not-text">Не менее 8 символов</div>
+                      <div class="popup-password--word popup-password--not-text">Одна буква должна быть заглавной</div>
+                      <div class="popup-password--number popup-password--not-text">Должна быть как минимум одна цифра</div>
+                      <div class="popup-password--complite popup-password--not-text active">Пароль и подтверждение пароля должны совпадать</div>
+                    </div>
+                    <input class="input-ur-forms w-100 popup-password--change" type="password" placeholder="Пароль">
+                  </div>
                 </div>
                 <div class="popup-checkbox-wrap m-40px">
                   <div class="popup-remember-me mobile-mb-30">
@@ -642,7 +651,7 @@
         </div>
         <div class="modal fade" id="popup-reg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered popup-w-570" role="document">
-            <form class="modal-content">
+            <form class="modal-content" id="reg-form-main">
               <div class="popup-header">
                 <div class="popup-close--icon close" data-dismiss="modal" aria-label="Close">
                   <svg class="icon icon-close ">
@@ -652,16 +661,30 @@
                 <div class="form-title">Создайте свой аккаунт<span></span></div>
               </div>
               <div class="popup-middle">
+                <div class="popup-choise--country">
+                  <div class="popup-choise--country--input"><span>Россия</span>
+                    <svg class="icon icon-arrow-down ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                  </div>
+                  <div class="popup-choise--country__list">
+                    <div class="popup-choise--country__item" data-tel-mask="+7(000) 000 00 00">Россия</div>
+                    <div class="popup-choise--country__item" data-tel-mask="(+900 00) 000-00-00">Узбекистан</div>
+                  </div>
+                </div>
                 <div class="popup-input-wrap m-40px">
                   <input class="input-ur-forms mb-30" type="text" placeholder="ФИО">
-                  <input class="input-ur-forms mb-30 mask-phone" type="tel" placeholder="Телефон">
+                  <input class="input-ur-forms mb-30 country-tel" type="tel" placeholder="Телефон" data-mask="+7(000) 000 00 00">
                   <input class="input-ur-forms mb-30" type="email" placeholder="Email">
                   <input class="input-ur-forms" type="password" placeholder="Пароль">
                 </div>
                 <div class="popup-checkbox-wrap m-40px">
-                  <div class="popup-remember-me">
-                    <input class="checkbox-form" id="agree" type="checkbox">
-                    <label for="agree"><span>Я согласен с<a class="ml-1" href="/">Пользовательским соглашением и Политикой обработки персональных данных</a></span></label>
+                  <div class="popup-rem--agree">
+                    <div class="popup-remember-me">
+                      <input class="checkbox-form popup-checkbox-rules" id="agree" type="checkbox" required>
+                      <label for="agree"><span>Я согласен с<a class="ml-1" href="/">Пользовательским соглашением и Политикой обработки персональных данных</a></span></label>
+                    </div>
+                    <div class="popup-agree--rules">Вы должны принять соглашение</div>
                   </div>
                 </div>
                 <button class="main-button-color mw-200 m-0-auto" type="submit">Создать аккаунт
@@ -688,13 +711,13 @@
                   </svg>
                 </div>
                 <div class="form-title">Восстановление пароля<span></span></div>
-                <div class="popup-annotation-text">Укажите Ваш email для восстановления пароля</div>
+                <div class="popup-annotation-text">Укажите Ваш Email для восстановления пароля</div>
               </div>
               <div class="popup-middle">
                 <div class="popup-input-wrap m-40px">
                   <input class="input-ur-forms mb-30" type="email" placeholder="Email">
                 </div>
-                <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore2">Продолжить
+                <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore-email">Продолжить
                   <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
                     <path id="i-2" d="M34 8L0 8"></path>
                     <path id="i-1" d="M17 8L0 8"></path>
@@ -707,7 +730,7 @@
         </div>
         <div class="modal fade" id="popup-restore2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered popup-w-570" role="document">
-            <form class="modal-content">
+            <form class="modal-content" id="popup-restore--code--form">
               <div class="popup-header">
                 <div class="popup-close--icon close" data-dismiss="modal" aria-label="Close">
                   <svg class="icon icon-close ">
@@ -719,7 +742,25 @@
               </div>
               <div class="popup-middle">
                 <div class="popup-input-wrap m-40px">
-                  <input class="input-ur-forms mb-30 text-center mask-code" type="text" placeholder="__ __ __ __">
+                  <input class="input-ur-forms mb-30 text-center popup-restore--code" type="text" placeholder="__ __ __ __" data-mask="0 0 0 0">
+                  <div class="popup-timer--send">
+                    <div class="popup-send-code--again">Получить код повторно</div>
+                    <div class="popup-timer--wrapper">
+                      <div class="popup-timer--text">Повторное получение кода возможно через</div>
+                      <div class="timer-wrapper">
+                        <div class="timer-section">
+                          <div class="timer" id="min-dozens">3</div>
+                          <div class="timer" id="min-unity">0</div>
+                        </div>
+                        <div class="timer-section--dots">:</div>
+                        <div class="timer-section">
+                          <div class="timer" id="sec-dozens">0</div>
+                          <div class="timer" id="sec-unity">0</div>
+                        </div>
+                      </div>
+                      <p id="message"></p>
+                    </div>
+                  </div>
                 </div>
                 <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore3">Продолжить
                   <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
@@ -749,13 +790,13 @@
                   <input class="input-ur-forms mb-30" type="password" placeholder="Укажите новый пароль">
                   <input class="input-ur-forms mb-30" type="password" placeholder="Подтвердите новый пароль">
                 </div>
-                <button class="main-button-color mw-200 m-0-auto">Продолжить
+                <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore-pass-ok">Продолжить
                   <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
                     <path id="i-2" d="M34 8L0 8"></path>
                     <path id="i-1" d="M17 8L0 8"></path>
                     <path id="i-3" d="M27 1L34 8L27 15"></path>
                   </svg>
-                </button>
+                </div>
               </div>
             </form>
           </div>
@@ -770,32 +811,55 @@
                   </svg>
                 </div>
                 <div class="form-title">Запись на экзамен<span></span></div>
-                <div class="popup-exam-reg mr-0 ml-0">
-                  <div class="popup-exam-icon">
-                    <svg class="icon icon-home2 ">
-                      <use xlink:href="static/img/svg/symbol/sprite.svg#home2"></use>
+                <div class="popup-exam-reg__wrap">
+                  <div class="popup-exam-reg mr-0 ml-0 mb-0">
+                    <div class="popup-exam-icon">
+                      <svg class="icon icon-home2 ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#home2"></use>
+                      </svg>
+                    </div>
+                    <div class="popup-exam-content">
+                      <div class="popup-exam-title">Оформление вида на жительство</div>
+                      <div class="popup-exam-desc">Комплексное тестирование для получения разрешения на работу</div>
+                    </div>
+                    <div class="popup-exam--arrow">
+                      <svg class="icon icon-arrow-down ">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="popup-exam--list">
+                    <div class="popup-exam--item">Оформление Вида на жительство (ВНЖ) – 28 500 ₽</div>
+                    <div class="popup-exam--item">Оформление Гражданства – 40 200 ₽</div>
+                    <div class="popup-exam--item">Оформление Временного проживания (РВП) – 30 800 ₽</div>
+                  </div>
+                </div>
+                <div class="popup-choise--country">
+                  <div class="popup-choise--country--input"><span>Россия</span>
+                    <svg class="icon icon-arrow-down ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
                     </svg>
                   </div>
-                  <div class="popup-exam-content">
-                    <div class="popup-exam-title">Оформление вида на жительство</div>
-                    <div class="popup-exam-desc">Комплексное тестирование для получения разрешения на работу</div>
+                  <div class="popup-choise--country__list">
+                    <div class="popup-choise--country__item" data-tel-mask="+7(000) 000 00 00">Россия</div>
+                    <div class="popup-choise--country__item" data-tel-mask="(+900 00) 000-00-00"> Узбекистан</div>
                   </div>
                 </div>
               </div>
               <div class="popup-middle">
                 <div class="popup-input-wrap mb-0">
                   <div class="input-ur-forms--wrap">
-                    <input class="input-ur-forms mb-30" type="text" placeholder="Фамилия">
-                    <input class="input-ur-forms mb-30 mask-phone" type="tel" placeholder="Телефон">
+                    <input class="input-ur-forms mb-30" type="text" placeholder="Фамилия" required>
+                    <input class="input-ur-forms mb-30 country-tel" type="tel" placeholder="Телефон" data-mask="+7(000) 000 00 00" required>
                   </div>
                   <div class="input-ur-forms--wrap">
-                    <input class="input-ur-forms mb-30" type="text" placeholder="Имя">
-                    <input class="input-ur-forms mb-30" type="email" placeholder="Email">
+                    <input class="input-ur-forms mb-30" type="text" placeholder="Имя" required>
+                    <input class="input-ur-forms mb-30" type="email" placeholder="Email" required>
                   </div>
                   <div class="input-ur-forms--wrap">
                     <input class="input-ur-forms" type="text" placeholder="Отчество">
                     <div class="input-ur-date">
-                      <input class="input-ur-forms mask-date date-exam" type="text" placeholder="Дата экзамена">
+                      <input class="input-ur-forms mask-date date-exam" type="text" placeholder="Дата экзамена" required readonly>
                       <svg class="icon icon-calendar ">
                         <use xlink:href="static/img/svg/symbol/sprite.svg#calendar"></use>
                       </svg>
@@ -882,13 +946,13 @@
                     <input type="text" placeholder="Промокод"><span class="activate-promo">Активировать</span>
                   </div>
                 </div>
-                <button class="main-button-color mw-200 m-0-auto" type="submit">Оплатить
+                <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-exam-ok">Оплатить
                   <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
                     <path id="i-2" d="M34 8L0 8"></path>
                     <path id="i-1" d="M17 8L0 8"></path>
                     <path id="i-3" d="M27 1L34 8L27 15"></path>
                   </svg>
-                </button>
+                </div>
               </div>
             </form>
           </div>
@@ -1496,6 +1560,42 @@
             </form>
           </div>
         </div>
+        <div class="modal fade" id="popup-add-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered popup-w-770" role="document">
+            <form class="modal-content">
+              <div class="popup-header">
+                <div class="popup-close--icon close" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                  </svg>
+                </div>
+                <div class="form-title">Оставить отзыв<span></span></div>
+              </div>
+              <div class="popup-middle">
+                <div class="popup-input-wrap m-40px">
+                  <div class="popup-select--wrap">
+                    <div class="popup-select--input">Ваша профессия</div>
+                    <svg class="icon icon-arrow-down ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#arrow-down"></use>
+                    </svg>
+                    <div class="popup-select--list">
+                      <div class="popup-select--item">Ваша профессия1</div>
+                      <div class="popup-select--item">Ваша профессия2</div>
+                    </div>
+                  </div>
+                  <textarea class="textarea-forms mb-30" cols="5" rows="4" placeholder="Поделитесь вашим мнением о нашем сервисе..."></textarea>
+                </div>
+                <button class="main-button-color mw-200 m-0-auto" type="submit">Отправить
+                  <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
+                    <path id="i-2" d="M34 8L0 8"></path>
+                    <path id="i-1" d="M17 8L0 8"></path>
+                    <path id="i-3" d="M27 1L34 8L27 15"></path>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
         <div class="support-button--wrap">
           <div class="support-button">
             <svg class="icon icon-help ">
@@ -1573,6 +1673,67 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="modal fade" id="popup-restore-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered popup-w-430" role="document">
+            <form class="modal-content">
+              <div class="popup-header">
+                <div class="popup-close--icon close" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                  </svg>
+                </div>
+                <div class="form-title">Проверьте Ваш email<span></span></div>
+                <div class="popup-annotation-text m-40px">На Ваш электронный адрес было выслано письмо с ссылкой для восстановления доступа</div>
+              </div>
+              <div class="popup-middle">
+                <div class="main-button-color mw-200 m-0-auto" data-toggle="modal" data-dismiss="modal" data-target="#popup-restore2">Ok
+                  <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
+                    <path id="i-2" d="M34 8L0 8"></path>
+                    <path id="i-1" d="M17 8L0 8"></path>
+                    <path id="i-3" d="M27 1L34 8L27 15"></path>
+                  </svg>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal fade" id="popup-restore-pass-ok" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered popup-w-430" role="document">
+            <form class="modal-content">
+              <div class="popup-header">
+                <div class="popup-close--icon close" data-dismiss="modal" aria-label="Close">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+                  </svg>
+                </div>
+                <div class="form-title">Пароль успешно изменен<span></span></div>
+              </div>
+              <button class="main-button-color mw-200 m-0-auto">Ok
+                <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
+                  <path id="i-2" d="M34 8L0 8"></path>
+                  <path id="i-1" d="M17 8L0 8"></path>
+                  <path id="i-3" d="M27 1L34 8L27 15"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="modal fade" id="popup-exam-ok" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered popup-w-430" role="document">
+            <form class="modal-content">
+              <div class="popup-header">
+                <div class="form-title">Вы успешно записались на комплексный экзамен<span></span></div>
+              </div>
+              <button class="main-button-color mw-200 m-0-auto">Ok
+                <svg class="icon icon-arrow-button " width="36" height="16" viewBox="0 0 36 16" xmlns="http://www.w3.org/2000/svg">
+                  <path id="i-2" d="M34 8L0 8"></path>
+                  <path id="i-1" d="M17 8L0 8"></path>
+                  <path id="i-3" d="M27 1L34 8L27 15"></path>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
